@@ -1,0 +1,345 @@
+fileFormatVersion: 2
+guid: ca8cf322688305243b55cecdfb923a03
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -883252829984737350
+    second: birrier-Sheet_0
+  - first:
+      213: -853134752927764435
+    second: birrier-Sheet_1
+  - first:
+      213: 8870436254337070810
+    second: birrier-Sheet_2
+  - first:
+      213: -4551408557348204228
+    second: birrier-Sheet_3
+  - first:
+      213: 1603871962944511211
+    second: birrier-Sheet_4
+  - first:
+      213: 2695221430893201255
+    second: birrier-Sheet_5
+  - first:
+      213: 8831056982709378241
+    second: birrier-Sheet_6
+  - first:
+      213: -372358937534853193
+    second: birrier-Sheet_7
+  - first:
+      213: 7157949568994622742
+    second: birrier-Sheet_8
+  - first:
+      213: 95300846180110883
+    second: birrier-Sheet_9
+  - first:
+      213: -614651062764322724
+    second: birrier-Sheet_10
+  - first:
+      213: 1124811261985535385
+    second: birrier-Sheet_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: birrier-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 44
+        width: 90
+        height: 53
+      alignment: 9
+      pivot: {x: 0.4999999, y: 0.023308448}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab7b6e51b3e0eb3f0800000000000000
+      internalID: -883252829984737350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: birrier-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 44
+        width: 90
+        height: 53
+      alignment: 9
+      pivot: {x: 0.50318974, y: 0.017891362}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d20333a567e0924f0800000000000000
+      internalID: -853134752927764435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: birrier-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 44
+        width: 89
+        height: 51
+      alignment: 9
+      pivot: {x: 0.50645155, y: 0.01587303}
+      border: {x: 1, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad6f18696ce1a1b70800000000000000
+      internalID: 8870436254337070810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: birrier-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 44
+        width: 88
+        height: 44
+      alignment: 9
+      pivot: {x: 0.4967374, y: 0.03020252}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bec14887d09124610800000000000000
+      internalID: 1603871962944511211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: birrier-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 44
+        width: 90
+        height: 37
+      alignment: 9
+      pivot: {x: 0.4968092, y: 0.018916052}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cc10ad69873e8a70800000000000000
+      internalID: 8831056982709378241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: birrier-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 44
+        width: 90
+        height: 23
+      alignment: 9
+      pivot: {x: 0.4999993, y: 0.050628494}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61db5146535265360800000000000000
+      internalID: 7157949568994622742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: birrier-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 44
+        width: 90
+        height: 14
+      alignment: 9
+      pivot: {x: 0.4999993, y: 0.0693531}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c50cd1f6d125877f0800000000000000
+      internalID: -614651062764322724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3f6f8a866eb414f4d940284b3ea4aba8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      birrier-Sheet_0: -883252829984737350
+      birrier-Sheet_1: -853134752927764435
+      birrier-Sheet_10: -614651062764322724
+      birrier-Sheet_11: 1124811261985535385
+      birrier-Sheet_2: 8870436254337070810
+      birrier-Sheet_3: -4551408557348204228
+      birrier-Sheet_4: 1603871962944511211
+      birrier-Sheet_5: 2695221430893201255
+      birrier-Sheet_6: 8831056982709378241
+      birrier-Sheet_7: -372358937534853193
+      birrier-Sheet_8: 7157949568994622742
+      birrier-Sheet_9: 95300846180110883
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
