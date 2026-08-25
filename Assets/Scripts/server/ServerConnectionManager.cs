@@ -58,7 +58,7 @@ public class ServerConnectionManager : MonoBehaviour
         return runner;
     }
 
-    public NetworkRunner GetRunner() => runner;
+    public NetworkRunner GetLobbyRunner() => runner;
 
     // 서버(로비)에 접속 - 씬 시작 시 자동 호출, 재시도 버튼에서도 호출
     public async Task ConnectToServer()
