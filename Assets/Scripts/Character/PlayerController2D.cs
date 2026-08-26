@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Fusion;
+using Fusion.Sockets;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerController2D : MonoBehaviour
+public class PlayerController2D : NetworkBehaviour
 {
     public Animator Anim;
 
@@ -41,27 +43,20 @@ public class PlayerController2D : MonoBehaviour
         rb.gravityScale = gravityScale;
     }
 
-    private void Update()
+    public override void FixedUpdateNetwork()
     {
-        // Keyboard.current가 null일 수 있으니(게임패드만 연결된 경우 등) 체크
-        moveInput = 0f;
-        if (Keyboard.current != null)
-        {
-            if ( Keyboard.current.leftArrowKey.isPressed)
-                moveInput = -1f;
-            else if ( Keyboard.current.rightArrowKey.isPressed)
-                moveInput = 1f;
-        }
 
-        bool jumpDownThisFrame = Keyboard.current != null &&Keyboard.current.spaceKey.wasPressedThisFrame;
-
-        if (jumpDownThisFrame)
+        if (GetInput(out PlayerNetworkInput input))
         {
-            jumpBufferTimer = jumpBufferTime;
-        }
-        else
-        {
-            jumpBufferTimer -= Time.deltaTime;
+            moveInput = input.MoveX;
+            if (input.JumpInput)
+            {
+                jumpBufferTimer = jumpBufferTime;
+            }
+            else
+            {
+                jumpBufferTimer -= Time.fixedDeltaTime;
+            }
         }
 
         wasGrounded = isGrounded;
@@ -78,7 +73,7 @@ public class PlayerController2D : MonoBehaviour
         }
         else
         {
-            coyoteTimer -= Time.deltaTime;
+            coyoteTimer -= Runner.DeltaTime;
         }
 
         if (jumpBufferTimer > 0f && coyoteTimer > 0f)
@@ -93,14 +88,17 @@ public class PlayerController2D : MonoBehaviour
             transform.localScale = new Vector3(Mathf.Sign(-moveInput), 1f, 1f);
         }
 
-        UpdateAnimator();
-    }
-
-    private void FixedUpdate()
-    {
         HandleMove();
         HandleJump();
         HandleGravity();
+    }
+
+    public override void Render()
+    {
+        if (Anim == null) return;
+
+        Anim.SetFloat(SpeedHash, Mathf.Abs(rb.linearVelocity.x));
+        Anim.SetBool(IsGroundedHash, isGrounded);
     }
 
     private void HandleMove()
@@ -132,14 +130,6 @@ public class PlayerController2D : MonoBehaviour
         {
             rb.gravityScale = gravityScale;
         }
-    }
-
-    private void UpdateAnimator()
-    {
-        if (Anim == null) return;
-
-        Anim.SetFloat(SpeedHash, Mathf.Abs(rb.linearVelocity.x));
-        Anim.SetBool(IsGroundedHash, isGrounded);
     }
 
     private void OnDrawGizmosSelected()

@@ -1,19 +1,25 @@
 using UnityEngine;
 using Unity.Cinemachine;
+using Fusion;
 
-public class CameraFollowSetup : MonoBehaviour
+public class CameraFollowSetup : NetworkBehaviour
 {
-private void Start()
+    public override void Spawned()
     {
-        CinemachineCamera vcam = FindFirstObjectByType<CinemachineCamera>();
+        if (Object.HasInputAuthority)
+        {
 
-        if (vcam != null)
-        {
-            vcam.Follow = transform;
-        }
-        else
-        {
-            Debug.LogWarning("씬에 CinemachineCamera가 없습니다.");
+
+            CinemachineCamera vcam = FindFirstObjectByType<CinemachineCamera>();
+
+            if (vcam != null)
+            {
+                vcam.Follow = transform;
+            }
+            else
+            {
+                Debug.LogWarning("씬에 CinemachineCamera가 없습니다.");
+            }
         }
     }
 }

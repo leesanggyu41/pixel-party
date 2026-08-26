@@ -9,16 +9,21 @@ public class RoomManager : NetworkBehaviour
     public static RoomManager Instance { get; private set; }
 
     [Header("Scene Number")]
-    [SerializeField] private int mainSceneNumber = 2; 
+    [SerializeField] private int mainSceneNumber = 2;
 
     [Header("Wait UI")]
     [SerializeField] private GameObject waitUI;
 
     private NetworkRunner gameRunner;
 
+
+    [SerializeField] private NetworkPrefabRef playerPrefab;
+
+
+
     private void Awake()
     {
-        if(Instance != null && Instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
@@ -34,7 +39,7 @@ public class RoomManager : NetworkBehaviour
             waitUI.SetActive(true);
         }
 
-        if(gameRunner != null && gameRunner.IsRunning)
+        if (gameRunner != null && gameRunner.IsRunning)
         {
             await gameRunner.Shutdown();
         }
@@ -45,9 +50,13 @@ public class RoomManager : NetworkBehaviour
         sceneListener.Setup(waitUI);
         gameRunner.AddCallbacks(sceneListener);
 
+        SpawnManager spawnManager = gameRunner.gameObject.AddComponent<SpawnManager>();
+        spawnManager.playerPrefab = playerPrefab;
+        gameRunner.AddCallbacks(spawnManager);
+
         var result = await gameRunner.StartGame(new StartGameArgs
         {
-            GameMode = GameMode.Client,
+            GameMode = GameMode.Host,
             SessionName = roomName,
             PlayerCount = maxPlayers,
             SessionProperties = customProps,
@@ -92,6 +101,10 @@ public class RoomManager : NetworkBehaviour
         SceneLoadListener sceneListener = gameRunner.gameObject.AddComponent<SceneLoadListener>();
         sceneListener.Setup(waitUI);
         gameRunner.AddCallbacks(sceneListener);
+
+        SpawnManager spawnManager = gameRunner.gameObject.AddComponent<SpawnManager>();
+        spawnManager.playerPrefab = playerPrefab;
+        gameRunner.AddCallbacks(spawnManager);
 
         var result = await gameRunner.StartGame(new StartGameArgs
         {

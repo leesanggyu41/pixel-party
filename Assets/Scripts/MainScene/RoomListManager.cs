@@ -30,15 +30,21 @@ public class RoomListManager : MonoBehaviour, INetworkRunnerCallbacks
         }
         Instance = this;
     }
-    
-    
+    private void OnDestroy()
+    {
+        if (_runner != null)
+        {
+            _runner.RemoveCallbacks(this);
+        }
+    }
+
     void Start()
     {
         _runner = ServerConnectionManager.Instance.GetLobbyRunner();
         if (_runner != null)
         {
             _runner.RemoveCallbacks(this);
-            _runner.AddCallbacks(this);            
+            _runner.AddCallbacks(this);
         }
         else
         {
@@ -48,7 +54,7 @@ public class RoomListManager : MonoBehaviour, INetworkRunnerCallbacks
 
     void Update()
     {
-        if(pageText != null)
+        if (pageText != null)
         {
             pageText.text = $"Page: {currentPage + 1}";
         }
@@ -56,7 +62,7 @@ public class RoomListManager : MonoBehaviour, INetworkRunnerCallbacks
 
     public void OnSessionListUpdated(NetworkRunner runner, List<SessionInfo> sessionList)
     {
-        if(sessionList.Count == 0 && allRooms.Count == 0) return;
+        if (sessionList.Count == 0 && allRooms.Count == 0) return;
 
         allRooms = sessionList.Where(session => session.IsOpen).ToList();
         RefreshPage();
@@ -64,6 +70,8 @@ public class RoomListManager : MonoBehaviour, INetworkRunnerCallbacks
     }
     public void RefreshPage()
     {
+
+        if(roomListContent == null) return;
         foreach (Transform child in roomListContent)
         {
             Destroy(child.gameObject);

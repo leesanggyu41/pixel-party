@@ -11,7 +11,7 @@ public class CreateRoom : MonoBehaviour
 
     private int MaxPlayers = 5;
 
-    public async Task CreateRoomButton()
+    public async void CreateRoomButton()
     {
         string roomName = roomNameInputField.text.Trim();
         string password = passwordInputField.text.Trim();
