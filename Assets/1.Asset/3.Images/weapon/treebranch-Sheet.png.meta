@@ -1,0 +1,299 @@
+fileFormatVersion: 2
+guid: 35dbec327399c2a4596848a89d2537a9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9040790633695849332
+    second: treebranch-Sheet_0
+  - first:
+      213: -1860891598208325077
+    second: treebranch-Sheet_1
+  - first:
+      213: 6553032513962618248
+    second: treebranch-Sheet_2
+  - first:
+      213: -7947350905946421710
+    second: treebranch-Sheet_3
+  - first:
+      213: 3214261859353437720
+    second: treebranch-Sheet_4
+  - first:
+      213: -7458480239291631162
+    second: treebranch-Sheet_5
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: treebranch-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 22
+        width: 28
+        height: 28
+      alignment: 9
+      pivot: {x: 0.90229005, y: 0.07536043}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47bae126e27577d70800000000000000
+      internalID: 9040790633695849332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treebranch-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 23
+        width: 20
+        height: 38
+      alignment: 9
+      pivot: {x: 0.46871108, y: 0.059480216}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2aa84b63f8cc26e0800000000000000
+      internalID: -1860891598208325077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treebranch-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 22
+        width: 28
+        height: 41
+      alignment: 9
+      pivot: {x: 0.49385944, y: 0.038753927}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88da35c1a5c01fa50800000000000000
+      internalID: 6553032513962618248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treebranch-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 21
+        width: 34
+        height: 33
+      alignment: 9
+      pivot: {x: 0.9146271, y: 0.09364614}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2364fa9357655b190800000000000000
+      internalID: -7947350905946421710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treebranch-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 14
+        width: 38
+        height: 30
+      alignment: 9
+      pivot: {x: 0.9524175, y: 0.3166197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81629d5912a5b9c20800000000000000
+      internalID: 3214261859353437720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treebranch-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 14
+        width: 38
+        height: 20
+      alignment: 9
+      pivot: {x: 0.93432134, y: 0.48280793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c970c43db72e7890800000000000000
+      internalID: -7458480239291631162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f834701eadf41e449a06f53792f3f3e1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      treebranch-Sheet_0: 9040790633695849332
+      treebranch-Sheet_1: -1860891598208325077
+      treebranch-Sheet_2: 6553032513962618248
+      treebranch-Sheet_3: -7947350905946421710
+      treebranch-Sheet_4: 3214261859353437720
+      treebranch-Sheet_5: -7458480239291631162
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
