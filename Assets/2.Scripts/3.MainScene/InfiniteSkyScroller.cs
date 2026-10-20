@@ -8,15 +8,16 @@ public class InfiniteSkyScroller : MonoBehaviour
 
     public MeshRenderer mesh;
 
+    private Material material;
+
     private void Awake()
     {
-        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
-
-
+        if (mesh == null) mesh = GetComponent<MeshRenderer>();
+        material = mesh.material; // 인스턴스를 한 번만 생성해 캐싱
     }
 
     private void Update()
     {
-        mesh.material.mainTextureOffset += new Vector2(scrollSpeed * Time.deltaTime, 0);
+        material.mainTextureOffset += new Vector2(scrollSpeed * Time.deltaTime, 0);
     }
 }

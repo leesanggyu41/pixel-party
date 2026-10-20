@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3323765462379786880}
-  m_Layer: 0
+  - component: {fileID: 4231396860293051012}
+  - component: {fileID: 608968192235449049}
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,6 +33,97 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8581140161779754035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4231396860293051012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4246745236625509576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fusion.Runtime.dll::Fusion.NetworkObject
+  SortKey: 2918436511
+  SendPriority: 1
+  EnableInterpolation: 1
+  Flags: 262402
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: 608968192235449049}
+  ForceRemoteRenderTimeframe: 0
+--- !u!114 &608968192235449049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4246745236625509576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fusion.Runtime.dll::Fusion.NetworkTransform
+  _stateAuthorityChangeErrorCorrectionDelta: 0
+  SyncScale: 0
+  SyncParent: 1
+  _autoAOIOverride: 1
+  ConfigFlags: 0
+  PhysicsSettings:
+    ForecastEnabled: 1
+    DebugPhysics: 0
+    GravityForecast: 2
+    MaxExtrapolationTime: 0.15
+    MinLinearDetectedError: 0.02
+    MinAngularDetectedError: 3
+    MaxLinearError: 0
+    MaxAngularError: 0
+    LowCorrectionProgressThreshold: 0.015
+    HighErrorSimilarityThreshold: 1
+    MaxErrorTotalTime: 0.5
+    MaxRemoteSleepIgnoreTime: 0.5
+    ErrorCorrectionType: 0
+    LinearVelCorrectionMul: 1
+    AngularVelCorrectionMul: 1
+    PositionCorrectionLerp: 0.15
+    RotationCorrectionLerp: 0.15
+    Spring: 75
+    Damper: 2
+    MinImpactfulCollisionAlignment: 0.3
+    ImpactStartCorrectionTime: 0.1
+    ImpactCorrectionTimeComplete: 0.3
+--- !u!1 &6123028694788205153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 996928633895078990}
+  m_Layer: 8
+  m_Name: foot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &996928633895078990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6123028694788205153}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.30984852, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8581140161779754035}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6987253701012955106
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,13 +136,13 @@ GameObject:
   - component: {fileID: 8909053181760751155}
   - component: {fileID: 2698232587416508914}
   - component: {fileID: 9117764722319729777}
-  - component: {fileID: 5679695390388732796}
-  - component: {fileID: 4057392210382400739}
   - component: {fileID: -5226138960040188983}
   - component: {fileID: 1103709351534562551}
-  m_Layer: 0
+  - component: {fileID: 4790960140646807474}
+  - component: {fileID: 7524719925733611567}
+  m_Layer: 8
   m_Name: knight
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,6 +161,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3323765462379786880}
+  - {fileID: 996928633895078990}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8909053181760751155
@@ -197,59 +291,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.59296316, y: 0.75651515}
   m_EdgeRadius: 0
---- !u!50 &5679695390388732796
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6987253701012955106}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!114 &4057392210382400739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6987253701012955106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2af3dfb8792ddef4abc506eb131975ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController2D
-  Anim: {fileID: 2698232587416508914}
-  moveSpeed: 6
-  acceleration: 50
-  deceleration: 60
-  jumpForce: 12
-  gravityScale: 3
-  fallGravityMultiplier: 1.5
-  coyoteTime: 0.1
-  jumpBufferTime: 0.1
-  groundCheck: {fileID: 3323765462379786880}
-  groundCheckSize: {x: 0.5, y: 0.1}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &-5226138960040188983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,10 +307,12 @@ MonoBehaviour:
   SendPriority: 1
   EnableInterpolation: 1
   Flags: 262402
-  NestedObjects: []
+  NestedObjects:
+  - {fileID: 4231396860293051012}
   NetworkedBehaviours:
   - {fileID: 1103709351534562551}
-  - {fileID: 4057392210382400739}
+  - {fileID: 4790960140646807474}
+  - {fileID: 7524719925733611567}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &1103709351534562551
 MonoBehaviour:
@@ -278,7 +321,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6987253701012955106}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
@@ -311,3 +354,49 @@ MonoBehaviour:
     MinImpactfulCollisionAlignment: 0.3
     ImpactStartCorrectionTime: 0.1
     ImpactCorrectionTimeComplete: 0.3
+--- !u!114 &4790960140646807474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6987253701012955106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 506319458, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fusion.Runtime.dll::Fusion.NetworkMecanimAnimator
+  Animator: {fileID: 2698232587416508914}
+  ApplyTiming: 2
+  SyncSettings: 79
+  StateHashes: 0000000068adcb49cde92cf6085b24003be801376b1e5c32ce5abb8dae1444b58da44713
+  TriggerHashes: 000000004b5664f0
+  TotalWords: 2
+--- !u!114 &7524719925733611567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6987253701012955106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71b5cae78d0d9f5449cf89fe242984ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAvatar
+  moveSpeed: 6
+  acceleration: 50
+  deceleration: 60
+  jumpForce: 12
+  gravityScale: 3
+  fallGravityMultiplier: 1.5
+  coyoteTime: 0.1
+  jumpBufferTime: 0.1
+  baseMaxHp: 16
+  baseDamageMultiplier: 1
+  baseCooltime: 0
+  baseMana: 60
+  baseMaxMana: 60
+  groundCheck: {fileID: 996928633895078990}
+  weaponPoint: {fileID: 3323765462379786880}
+  animator: {fileID: 2698232587416508914}

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c281503a95c0746ba2b133142bd8ee, type: 3}
+  m_Name: ClassPromotionTable
+  m_EditorClassIdentifier: Assembly-CSharp::ClassPromotionTable
+  promotionLevel: 5
+  entries:
+  - className: "\uC804\uC0AC"
+    weaponType: 0
+    avatarPrefab:
+      RawGuidValue: c89b202078acf86459141c3cbc0a5502
+  - className: "\uAD81\uC218"
+    weaponType: 1
+    avatarPrefab:
+      RawGuidValue: 00000000000000000000000000000000
+  - className: "\uB9C8\uBC95\uC0AC"
+    weaponType: 3
+    avatarPrefab:
+      RawGuidValue: c3a34b8b2ee78374d80de4faf97e5bd3
+  - className: "\uB3C4\uC801"
+    weaponType: 2
+    avatarPrefab:
+      RawGuidValue: 4efea71a53d38604fa9f41a63e5a122f

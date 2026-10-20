@@ -40,6 +40,7 @@ public class RoomListManager : MonoBehaviour, INetworkRunnerCallbacks
 
     void Start()
     {
+        if (pageText != null) pageText.text = $"Page: {currentPage + 1}";
         _runner = ServerConnectionManager.Instance.GetLobbyRunner();
         if (_runner != null)
         {
@@ -49,14 +50,6 @@ public class RoomListManager : MonoBehaviour, INetworkRunnerCallbacks
         else
         {
             _ = ServerConnectionManager.Instance.ConnectToServer();
-        }
-    }
-
-    void Update()
-    {
-        if (pageText != null)
-        {
-            pageText.text = $"Page: {currentPage + 1}";
         }
     }
 
@@ -70,8 +63,12 @@ public class RoomListManager : MonoBehaviour, INetworkRunnerCallbacks
     }
     public void RefreshPage()
     {
+        if (pageText != null)
+        {
+            pageText.text = $"Page: {currentPage + 1}";
+        }
 
-        if(roomListContent == null) return;
+        if (roomListContent == null) return;
         foreach (Transform child in roomListContent)
         {
             Destroy(child.gameObject);
@@ -86,13 +83,6 @@ public class RoomListManager : MonoBehaviour, INetworkRunnerCallbacks
             var roomItem = roomItemGO.GetComponent<RoomItem>();
             roomItem.Setup(allRooms[i]);
         }
-    }
-
-    private void CreateRoomItem(SessionInfo sessionInfo)
-    {
-        var roomItemGO = Instantiate(roomItemPrefab, roomListContent);
-        var roomItem = roomItemGO.GetComponent<RoomItem>();
-        roomItem.Setup(sessionInfo);
     }
 
     public async void OnClickRefreshButton()

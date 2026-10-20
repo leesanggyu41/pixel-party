@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
-public class RoomManager : NetworkBehaviour
+public class RoomManager : MonoBehaviour
 {
     public static RoomManager Instance { get; private set; }
 
@@ -14,7 +14,7 @@ public class RoomManager : NetworkBehaviour
     [Header("Wait UI")]
     [SerializeField] private GameObject waitUI;
 
-    private NetworkRunner gameRunner;
+    public NetworkRunner gameRunner;
 
 
     [SerializeField] private NetworkPrefabRef playerPrefab;
@@ -29,6 +29,7 @@ public class RoomManager : NetworkBehaviour
             return;
         }
         Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     public NetworkRunner GetGameRunner() => gameRunner;

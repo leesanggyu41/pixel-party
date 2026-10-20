@@ -3847,8 +3847,7 @@ MonoBehaviour:
   EnableInterpolation: 1
   Flags: 262146
   NestedObjects: []
-  NetworkedBehaviours:
-  - {fileID: 1283446668}
+  NetworkedBehaviours: []
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &1283446668
 MonoBehaviour:
@@ -3864,8 +3863,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
   mainSceneNumber: 2
   waitUI: {fileID: 1083589063}
+  gameRunner: {fileID: 0}
   playerPrefab:
-    RawGuidValue: 87f943c21f9f4fc4b9aaab6e6d2d8c88
+    RawGuidValue: 9ad05f3a425ec1c46b85b341b36833a9
 --- !u!4 &1283446669
 Transform:
   m_ObjectHideFlags: 0

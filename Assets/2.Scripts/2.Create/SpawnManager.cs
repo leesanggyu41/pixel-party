@@ -14,13 +14,22 @@ public class SpawnManager : MonoBehaviour, INetworkRunnerCallbacks
 
     public void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
     {
-        if (runner.IsServer)
+        if (!runner.IsServer) return;
+
+        // 게임이 이미 시작된 상태면, 이 플레이어는 레이스 컨디션으로 들어온 것 - 즉시 추방
+        if (GameStartManager.Instance != null && GameStartManager.Instance.IsGameStarted)
         {
-            Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(-5f, 5f), 1f, 0f);
-            NetworkObject playerObject = runner.Spawn(playerPrefab, spawnPosition, Quaternion.identity, player);
-            Debug.Log($"Player {player.PlayerId} joined. Spawned at {spawnPosition}");
-            spawnedPlayers.Add(player, playerObject);
+            Debug.LogWarning($"게임 시작 후 입장 시도 감지 - {player} 추방");
+            runner.Disconnect(player);
+            return;
         }
+
+        Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(-5f, 5f), 1f, 0f);
+        NetworkObject playerObject = runner.Spawn(playerPrefab, spawnPosition, Quaternion.identity, player);
+        runner.SetPlayerObject(player, playerObject);
+        spawnedPlayers.Add(player, playerObject);
+
+
     }
 
     public void OnPlayerLeft(NetworkRunner runner, PlayerRef player)
@@ -47,7 +56,17 @@ public class SpawnManager : MonoBehaviour, INetworkRunnerCallbacks
             else if (Keyboard.current.rightArrowKey.isPressed)
                 data.MoveX = 1f;
 
-            data.JumpInput = Keyboard.current.spaceKey.wasPressedThisFrame;
+            // wasPressedThisFrame 직접 읽는 대신, 래치에 쌓인 값을 소비
+            data.JumpInput = LocalInputLatch.JumpPending;
+            data.AttackInput = LocalInputLatch.AttackPending;
+
+            data.SkillInput = LocalInputLatch.SkillPending;
+            data.CharacterSkillInput = LocalInputLatch.CharacterSkillPending;
+            LocalInputLatch.CharacterSkillPending = false;
+
+            LocalInputLatch.JumpPending = false;
+            LocalInputLatch.AttackPending = false;
+            LocalInputLatch.SkillPending = false;
         }
 
         input.Set(data);
